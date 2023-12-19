@@ -1,0 +1,21 @@
+########################################
+#
+# Configuration file for scaping program
+# Robert Long 15 Dec 2023
+# This should be renamed config.yml
+#
+########################################
+
+
+base_url: 'https://base_url.com'
+max_pages: 150
+start_page: 141
+vpn_retries: 10
+vpn_servers:
+  - 'Europe'
+  - 'Germany'
+  - 'Spain'
+  - 'The_Americas'
+  - 'Netherlands'
+  - 'France'
+  - 'united_states'
