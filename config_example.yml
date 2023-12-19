@@ -7,9 +7,9 @@
 ########################################
 
 
-base_url: 'https://base_url.com'
-max_pages: 150
-start_page: 141
+base_url: 'https://foobar.xyz'
+max_pages: 221
+start_page: 698
 vpn_retries: 10
 vpn_servers:
   - 'Europe'
@@ -19,3 +19,8 @@ vpn_servers:
   - 'Netherlands'
   - 'France'
   - 'united_states'
+db_config:
+  host: 'xx'
+  user: 'xxxxxx'
+  password: 'xxxxxxx'
+  database: 'xxxxxxxx'

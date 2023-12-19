@@ -19,11 +19,12 @@ start_page = config['start_page']
 vpn_retries = config['vpn_retries']
 servers = config['vpn_servers']
 
+# Extract the database configuration from loaded config
+db_config = config['db_config']
 
 # Configure logging
 logging.basicConfig(filename='scraping_log.log', level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
-
 
 def change_vpn_server(retries=3):
     while retries > 0:
@@ -57,10 +58,13 @@ db_config = {
     'database': 'CrossValidated'
 }
 
-
 def connect_to_database():
-    return mysql.connector.connect(**db_config)
-
+    return mysql.connector.connect(
+        host=db_config['host'],
+        user=db_config['user'],
+        password=db_config['password'],
+        database=db_config['database']
+    )
 
 def update_or_insert_user(user_id, username, url):
     try:
